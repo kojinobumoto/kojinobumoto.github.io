@@ -77,10 +77,12 @@ $$
 because
 
 $$
-Let C = \overline{x} \cdot \overline{y} + m \cdot p,
-then,
+\text{Let} $C = \overline{x} \cdot \overline{y} + m \cdot p$\\
+\text{then,}\\
 C \cdot r^{-1} = \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
+$$
 
+$$
 C \cdot r^{-1} \mod{p}
 \qquad = (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p}
 \qquad = ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p}
