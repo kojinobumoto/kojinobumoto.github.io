@@ -1,0 +1,1 @@
+# kojinobumoto.github.io
