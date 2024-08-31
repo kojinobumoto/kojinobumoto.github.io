@@ -82,8 +82,9 @@ then,
 C \cdot r^{-1} = \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
 
 C \cdot r^{-1} \mod{p}
-    = (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p}
-    = ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p}
-    = (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}    (o since m \cdot p \cdot r^{-1} \mod{p} = 0)
-    = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}    (o (a \mod{b}) \mod{b} = a \mod{b})
+\qquad = (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p}
+\qquad = ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p}
+\qquad = (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}    (o since m \cdot p \cdot r^{-1} \mod{p} = 0)
+\qquad = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}    (o (a \mod{b}) \mod{b} = a \mod{b})
+$$
 
