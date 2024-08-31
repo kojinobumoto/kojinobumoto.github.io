@@ -86,8 +86,8 @@ $$
 C \cdot r^{-1} \mod{p} \\
 \qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
 \qquad &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
-\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}   \quad (\text{* since}  \quad m \cdot p \cdot r^{-1} \text{ is obviously divisible by } p \text{,} \quad m \cdot p \cdot r^{-1} \mod{p} = 0) \\
-\qquad &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}  \quad  (\text{* since} \quad (a \mod{b}) \mod{b} = a \mod{b})
+\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}   \quad (\text{ * since}  \quad m \cdot p \cdot r^{-1} \text{ is divisible by } p \text{,} \quad m \cdot p \cdot r^{-1} \mod{p} = 0) \\
+\qquad &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}  \quad  (\text{ * since} \quad (a \mod{b}) \mod{b} = a \mod{b})
 \end{aligned}
 $$
 
@@ -133,7 +133,7 @@ $$
 m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
 $$
 
-### As a result of above discussion we get,
+### As a result of above discussion, we get,
 
 $$
 \begin{aligned}
