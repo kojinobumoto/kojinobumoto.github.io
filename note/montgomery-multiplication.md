@@ -45,7 +45,6 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 Now I think I understood "why", so, I'll keep my note in this page.
 
 ## Explanation
-So, I want to compute $\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$, where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$in the source of onenquantum-safe.
-
+So, I want to compute $\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$, where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
 As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if I can find some integer $m$ such that $(\overline{x} \cdot \overline{y}) \cdot r^{-1} ¥mod{p} = 0$ (
 
