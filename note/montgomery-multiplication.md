@@ -24,7 +24,7 @@ $$
 - $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
 
 # The main part of this note.
-So, I was curious about if the Montgomery Multiplication was 
+I was curious about if the Montgomery Multiplication was 
 
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}
@@ -54,7 +54,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 Now I think I understood "why", so, I'll keep my note in this page.
 
 ## Explanation
-So, we want to compute 
+We want to compute 
 
 $$
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}
