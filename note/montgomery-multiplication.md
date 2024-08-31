@@ -62,22 +62,13 @@ $$
 
 where $r = 2^{31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
 
-As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if we can find some integer $m$ such that 
-
-$$
-\begin{aligned}
-(\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0 \\
-\text{(i.e. }(\overline{x} \cdot \overline{y} + m \cdot p) \text{ is divisible by } r )
-\end{aligned}
-$$
-
-then,
+Now, for some integer $m$
 
 $$
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p}
 $$
 
-### Now, let's see why.
+### Let's see why.
 Let 
 
 $$
