@@ -98,3 +98,23 @@ C \cdot r^{-1} \mod{p} \\
 \end{aligned}
 $$
 
+We want $m$ such that,
+
+$$
+(\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p} = 0
+$$
+
+so,
+
+$$
+\begin{aligned}
+\overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} \\
+m \cdot p \equiv -\overline{x} \cdot \overline{y} \mod{r} 
+\end{aligned}
+$$
+
+Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime)
+
+$$
+m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r}
+$$
