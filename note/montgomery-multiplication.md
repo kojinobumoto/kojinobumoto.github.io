@@ -69,6 +69,8 @@ $$
 (\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0 \\
 \text{(i.e }$\overline{x} \cdot \overline{y} + m \cdot p \text{ is divisible by } r \text{)}
 \end{aligned}
+$$
+
 then,
 
 $$
