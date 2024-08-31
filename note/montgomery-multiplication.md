@@ -135,6 +135,7 @@ m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r}
 $$
 
 therefore,
+
 $$
 m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
 $$
