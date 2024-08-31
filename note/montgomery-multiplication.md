@@ -20,7 +20,7 @@ $$
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}
 $$
-- $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n".
+- $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
 
 # The body of this note.
 So, I was curious about if the Montgomery Multiplication was $\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}$, then, how the actual implementation becomes as following (for example in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) )
@@ -45,6 +45,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 Now I think I understood "why", so, I'll keep my note in this page.
 
 ## Explanation
-Let's say $r = 2^{-321}".
-As explained in [this page](https://codeforces.com/blog/entry/103374), 
+So, I want to compute $\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$, where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$in the source of onenquantum-safe.
+
+As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if I can find some integer $m$ such that $(\overline{x} \cdot \overline{y}) \cdot r^{-1} ¥mod{p} = 0$ (
 
