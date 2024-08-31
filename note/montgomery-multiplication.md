@@ -67,7 +67,7 @@ As explained in [this page](https://codeforces.com/blog/entry/103374), in genera
 $$
 \begin{aligned}
 (\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0 \\
-\text{(i.e }$\overline{x} \cdot \overline{y} + m \cdot p \text{ is divisible by } r \text{)}
+\text{(i.e }(\overline{x} \cdot \overline{y} + m \cdot p) \text{ is divisible by } r )
 \end{aligned}
 $$
 
