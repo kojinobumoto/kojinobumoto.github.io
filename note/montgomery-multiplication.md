@@ -11,6 +11,7 @@ $$
 $$
 
 I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represente the number $x$ and multiplication $*$ in the Montgomery space, and $\cdot$ as the "normal" multiplication.
+
 i.e)
 - The representative of a number $x$ in the Montgomery space is
 
@@ -19,6 +20,7 @@ $$
 $$
 
 - The Montgomery Multiplication is
+
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}
 $$
