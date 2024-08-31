@@ -1,2 +1,2 @@
-# kojinobumoto.github.io
-Some notes.
+# Some notes...
+[Montgomery multiplication](note/montgomery-multiplication.md)
