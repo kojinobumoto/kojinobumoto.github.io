@@ -146,6 +146,6 @@ $$
 \begin{aligned}
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \\
 \qquad &= (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p} \\
-\qquad &= (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} \mod{p}
+\qquad &= ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p}
 \end{aligned}
 $$
