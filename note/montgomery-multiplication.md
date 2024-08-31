@@ -98,6 +98,7 @@ C \cdot r^{-1} \mod{p} \\
 \end{aligned}
 $$
 
+## so, $m$ will be...
 We want $m$ such that,
 
 $$
