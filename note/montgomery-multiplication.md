@@ -93,7 +93,7 @@ $$
 C \cdot r^{-1} \mod{p} \\
 \qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
 \qquad &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
-\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}   \quad (\text{* since}  \quad m \cdot p \cdot r^{-1} \text{is obviously divisible by} \quad p \quad \text{,} \quad m \cdot p \cdot r^{-1} \mod{p} = 0) \\
+\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}   \quad (\text{* since}  \quad m \cdot p \cdot r^{-1} \text{ is obviously divisible by } p \text{,} \quad m \cdot p \cdot r^{-1} \mod{p} = 0) \\
 \qquad &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}  \quad  (\text{* since} \quad (a \mod{b}) \mod{b} = a \mod{b})
 \end{aligned}
 $$
