@@ -142,3 +142,6 @@ $$
 \qquad &= ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p}
 \end{aligned}
 $$
+
+### Now, let's compare with the actual implementation.
+```z = (uint64_t)a * (uint64_t)b;``` is equivalent to $\overline{x} \cdot \overline{y}$.
