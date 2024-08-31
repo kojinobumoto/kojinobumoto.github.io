@@ -78,17 +78,6 @@ $$
 $$
 
 ### Now, let's see why.
-
-$$
-(\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0
-$$
-
-implies
-
-$$
-\overline{x} \cdot \overline{y} + m \cdot p \equiv
-$$
-
 Let 
 
 $$
