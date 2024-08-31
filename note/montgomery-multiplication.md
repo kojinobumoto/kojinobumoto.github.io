@@ -76,6 +76,16 @@ $$
 
 because,
 
+$$
+(\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0
+$$
+
+implies
+
+$$
+
+$$
+
 Let 
 
 $$
