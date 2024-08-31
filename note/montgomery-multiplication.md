@@ -58,9 +58,9 @@ So, I want to compute $\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$, wh
 
 As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if I can find some integer $m$ such that 
 
-$$(\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} ¥mod{p} = 0$$
+$$(\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p} = 0$$
 
 then,
 
-$$\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} ¥mod{p}$$
+$$\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p}$$
 
