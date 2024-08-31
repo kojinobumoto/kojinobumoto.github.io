@@ -74,9 +74,9 @@ $$
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p}
 $$
 
-because
+because,
 
-Let 
+    Let 
 
 $$
 C = \overline{x} \cdot \overline{y} + m \cdot p
