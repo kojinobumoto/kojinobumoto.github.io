@@ -27,7 +27,7 @@ $$
 So, I was curious about if the Montgomery Multiplication was 
 
 $$
-\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}
+\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}
 $$
 
 then, 
@@ -54,7 +54,9 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 Now I think I understood "why", so, I'll keep my note in this page.
 
 ## Explanation
-So, I want to compute $\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$, where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
+So, I want to compute "$\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}$", 
+
+where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
 
 As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if I can find some integer $m$ such that 
 
