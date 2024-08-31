@@ -145,3 +145,4 @@ $$
 
 ### Now, let's compare with the actual implementation.
 ```z = (uint64_t)a * (uint64_t)b;``` is equivalent to $\overline{x} \cdot \overline{y}$.
+The 'p0i' value is $-1/p \mod{2^{31}}
