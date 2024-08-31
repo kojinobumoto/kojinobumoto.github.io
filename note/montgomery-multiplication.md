@@ -31,6 +31,7 @@ $$
 $$
 
 , then, 
+
 how the actual implementation becomes as follows (for example in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) ).
 ```
 /*
