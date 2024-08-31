@@ -10,4 +10,7 @@ $$
 \overline{x} = x \cdot r \mod{n}
 $$
 
+I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represente the number $x$ and multiplication $*$ in the Montgomery space.
+
+
 
