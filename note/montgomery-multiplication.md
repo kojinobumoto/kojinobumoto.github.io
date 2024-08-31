@@ -20,9 +20,10 @@ $$
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}
 $$
+- $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n".
 
-# So,
-I was curious about if the Montgomery Multiplication was $\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}$, then, how the actual implementation becomes as following (for example in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) )
+# The body of this note.
+So, I was curious about if the Montgomery Multiplication was $\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}$, then, how the actual implementation becomes as following (for example in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) )
 ```
 /*
  * Montgomery multiplication modulo p. The 'p0i' value is -1/p mod 2^31.
@@ -41,4 +42,9 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 }
 ```
 
+Now I think I understood "why", so, I'll keep my note in this page.
+
+## Explanation
+Let's say $r = 2^{-321}".
+As explained in [this page](https://codeforces.com/blog/entry/103374), 
 
