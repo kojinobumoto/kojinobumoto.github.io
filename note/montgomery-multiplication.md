@@ -74,7 +74,7 @@ $$
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p}
 $$
 
-because,
+### Now, let's see why.
 
 $$
 (\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0
@@ -83,7 +83,7 @@ $$
 implies
 
 $$
-
+\overline{x} \cdot \overline{y} + m \cdot p \equiv
 $$
 
 Let 
