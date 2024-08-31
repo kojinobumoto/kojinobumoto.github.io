@@ -147,3 +147,7 @@ $$
 ```z = (uint64_t)a * (uint64_t)b;``` is equivalent to $\overline{x} \cdot \overline{y}$.
 
 ```(z * p0i)``` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$).
+
+Now, ```0x7FFFFFFF``` is the 31 bit sequence of **1** (**1111....**).
+
+So ```& (uint64_t)0x7FFFFFFF``` is equivalent to **$\mod{r}$** sine $r$ is pow 2 31 ($2^{31}$), masking $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with 0x7FFFFFFF means getting the remainings divided by $2^{31}$.
