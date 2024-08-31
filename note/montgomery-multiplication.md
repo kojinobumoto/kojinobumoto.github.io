@@ -150,4 +150,4 @@ $$
 
 Now, ```0x7FFFFFFF``` is the 31 bit sequence of **1** (**1111....**).
 
-So ```& (uint64_t)0x7FFFFFFF``` is equivalent to **mod r**. Since $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with ```0x7FFFFFFF``` means getting the remainings divided by $2^{31}$.
+So ```& (uint64_t)0x7FFFFFFF``` is equivalent to **"mod r"**. Since $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with ```0x7FFFFFFF``` means getting the remainings divided by $2^{31}$.
