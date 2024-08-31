@@ -146,4 +146,4 @@ $$
 ### Now, let's compare with the actual implementation.
 ```z = (uint64_t)a * (uint64_t)b;``` is equivalent to $\overline{x} \cdot \overline{y}$.
 
-```(z * p0i)``` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{2^{31}}$.
+```(z * p0i)``` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$).
