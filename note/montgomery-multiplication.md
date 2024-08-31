@@ -91,6 +91,6 @@ C \cdot r^{-1} \mod{p} \\
 \qquad &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
 \qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}    (o since m \cdot p \cdot r^{-1} \mod{p} = 0) \\
 \qquad &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}    (o (a \mod{b}) \mod{b} = a \mod{b})
-\begin{aligned}
+\end{aligned}
 $$
 
