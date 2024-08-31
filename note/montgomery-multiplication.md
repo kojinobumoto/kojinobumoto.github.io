@@ -53,7 +53,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 
 Now I think I understood "why", so, I'll keep my note in this page.
 
-### Explanation
+## Explanation
 So, I want to compute 
 
 $$
@@ -98,7 +98,7 @@ C \cdot r^{-1} \mod{p} \\
 \end{aligned}
 $$
 
-## so, $m$ will be...
+### so, $m$ will be...
 We want $m$ such that,
 
 $$
