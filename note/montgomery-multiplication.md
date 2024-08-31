@@ -85,7 +85,8 @@ $$
 then,
 
 $$
-C \cdot r^{-1} = \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
+C \cdot r^{-1} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1}
+\qquad &== \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
 $$
 
 $$
