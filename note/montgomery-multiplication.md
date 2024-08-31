@@ -20,6 +20,7 @@ $$
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n}
 $$
+
 -- $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
 
 # The body of this note.
