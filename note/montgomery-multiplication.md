@@ -76,7 +76,7 @@ $$
 
 because,
 
-    Let 
+Let 
 
 $$
 C = \overline{x} \cdot \overline{y} + m \cdot p
