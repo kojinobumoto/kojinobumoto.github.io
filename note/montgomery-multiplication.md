@@ -107,14 +107,35 @@ $$
 so,
 
 $$
-\begin{aligned}
-\overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} \\
-m \cdot p \equiv -\overline{x} \cdot \overline{y} \mod{r} 
-\end{aligned}
+\overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} 
 $$
 
-Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime)
+that is equivalent
+
+$$
+\overline{x} \cdot \overline{y} + m \cdot p = k \cdot r 
+$$
+
+for some integer $k$.
+
+We can solve for $m$:
+
+$$
+m \cdot p = k \cdot r  - \overline{x} \cdot \overline{y} 
+$$
+
+$$
+m \cdot p \equiv -\overline{x} \cdot \overline{y} \mod{r} 
+$$
+
+Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime), by multiplying both sides of above equation by $p^{-1}$, we get
 
 $$
 m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r}
 $$
+
+therefore,
+$$
+m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
+$$
+
