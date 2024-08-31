@@ -98,8 +98,7 @@ C \cdot r^{-1} \mod{p} \\
 \end{aligned}
 $$
 
-### so, $m$ will be...
-We want $m$ such that,
+### We want $m$ such that,
 
 $$
 (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p} = 0
