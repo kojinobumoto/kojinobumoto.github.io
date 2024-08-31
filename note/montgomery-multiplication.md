@@ -23,7 +23,7 @@ $$
 
 - $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
 
-# The body of this note.
+# The main part of this note.
 So, I was curious about if the Montgomery Multiplication was 
 
 $$
