@@ -1,4 +1,4 @@
 So, The [Montgomery Multiplication](https://en.algorithmica.org/hpc/number-theory/montgomery/) in the Montgomery space is defined as
-$$\overline{x} * \overlineyx}$$
+$$\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^-1 mod n$$
 
 
