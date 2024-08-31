@@ -141,7 +141,7 @@ $$
 m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
 $$
 
-### so,
+### As a result we get,
 
 $$
 \begin{aligned}
