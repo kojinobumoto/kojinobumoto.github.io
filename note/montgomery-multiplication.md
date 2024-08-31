@@ -5,7 +5,7 @@
 - [Montgomery reduction (DSZQUP XJLJ)](https://cryptography.fandom.com/wiki/Montgomery_reduction)
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
 
-# Before get started
+# Before getting started
 I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\cdot$ as the "normal" multiplication.
 
 i.e)
