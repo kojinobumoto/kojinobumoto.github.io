@@ -62,7 +62,7 @@ $$
 
 where $r = 2^{-31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
 
-As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if I can find some integer $m$ such that 
+As explained in [this page](https://codeforces.com/blog/entry/103374), in general, if we can find some integer $m$ such that 
 
 $$
 (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p} = 0
