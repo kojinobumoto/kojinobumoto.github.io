@@ -24,13 +24,10 @@ $$
 
 - The Montgomery Multiplication is
 
-$$
-\begin{aligned}
-\overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n} \\
-\\
-\text{where } n \text{ and } r \text{ are integers such that } r > n \text{ and } r \text{ is coprime to } n.
-\end{aligned}
-$$
+$$ \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n} $$
+<p align="center">
+where $$n$$  and $$r$$ are integers such that $$r > n$$ and $$r$$ is coprime to $$n$$.
+</p>
 
 
 ## The main part of this note.
@@ -66,12 +63,11 @@ Now I think I understood "why". So, I'll keep my note below.
 ## The thing I understood.
 We want to compute
 
-$$
-\begin{aligned}
-\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \\
-\text{where }r = 2^{31}\text{ and }p\text{ is an odd integer such that }2^{30} < p < 2^{31}
-\end{aligned}
-$$ 
+$$\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} $$
+
+<p align="center">
+where $$r = 2^{31}$$ and $$p$$  is an odd integer such that $$2^{30} < p < 2^{31}$$.
+</p>
 
 Now, for some integer $$m$$, we have
 
@@ -105,8 +101,9 @@ m \cdot p \cdot r^{-1} \mod{p}
 &= (0 \cdot (r^{-1} \mod{p})) \mod{p}\\
 &= 0 \\
 \\
-\text{ (*2)  } \quad
-(a \mod{b}) \mod{b} = a \mod{b}
+\text{ (*2)  } 
+(a \mod{b}) \mod{b} \\
+&= a \mod{b}
 \end{aligned}
 $$
 
