@@ -120,10 +120,12 @@ $$
 Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime), by multiplying both sides of above equation by $p^{-1}$, we get
 
 $$
-m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r}
+\begin{aligned}
+m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r} \\
 \\
 \text{therefore,}\\
 m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
+\end{aligned}
 $$
 
 
