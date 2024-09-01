@@ -1,2 +1,2 @@
 # My notes...
-[Montgomery multiplication](note/montgomery-multiplication.md)
+- [Montgomery multiplication](note/montgomery-multiplication.md)
