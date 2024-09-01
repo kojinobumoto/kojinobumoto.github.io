@@ -95,7 +95,6 @@ C \cdot r^{-1} \mod{p}
 &= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
 &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
 &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p} \quad \text{ (*1) }\\
-\\
 &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \qquad \text{ (*2) } \\
 \\
 \text{ (*1)  } \quad 
@@ -104,7 +103,7 @@ m \cdot p \cdot r^{-1} \mod{p}
 &= (0 \cdot (r^{-1} \mod{p})) \mod{p}\\
 &= 0 \\
 \\
-\text{ (*2)  } 
+\text{ (*2)  } \quad 
 (a \mod{b}) \mod{b} 
 &= a \mod{b}
 \end{aligned}
