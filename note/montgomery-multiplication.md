@@ -1,3 +1,8 @@
+---
+layout: post
+title: Montgomery Multiplication
+katex: True
+---
 # References
 - [Montgomery Multiplication (Algorithmica / HPC)](https://en.algorithmica.org/hpc/number-theory/montgomery/)
 - [Montgomery Multiplication (cp-algorithms.com)](https://cp-algorithms.com/algebra/montgomery_multiplication.html)
