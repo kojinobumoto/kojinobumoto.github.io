@@ -152,6 +152,8 @@ $$
   - So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Because of $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means to get the remainings divided by $2^{31}$.
 
 - Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
-  - and `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
+  - so that `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
 
 - The `>> 31` part of `((z + w) >> 31)` is equivalent to $\text{"}r^{-1}\text{"}$ of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$.
+
+- Here, $\overline{x} = x \cdot r \mod{p}$ where $r=2^{31}$ and $2^{30} < p < 2^{31}$, which impiles $\overline{x} < 2^{30}$.
