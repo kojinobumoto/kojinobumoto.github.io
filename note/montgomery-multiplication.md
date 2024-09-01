@@ -54,7 +54,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 }
 ```
 
-Now I think I understood "why", so, I'll keep my note in this page.
+Now I think I understood "why". So, I'll keep my note below.
 
 ## The thing I understood.
 We want to compute
