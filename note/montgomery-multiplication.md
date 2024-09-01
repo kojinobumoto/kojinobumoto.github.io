@@ -154,4 +154,4 @@ $$
 - Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
   - and `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
 
-- The `>> 31` part of `((z + w) >> 31)` is equivalent to $\text{"}r^{-1}\text{"}$ of $\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )\text{"}$.
+- The `>> 31` part of `((z + w) >> 31)` is equivalent to $\text{"}r^{-1}\text{"}$ of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$.
