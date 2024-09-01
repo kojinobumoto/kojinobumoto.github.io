@@ -146,11 +146,11 @@ $$
 ### Now, let's compare with the actual implementation.
 `z = (uint64_t)a * (uint64_t)b;` is equivalent to $\overline{x} \cdot \overline{y}$.
 
-`(z * p0i)` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)).
+`(z * p0i)` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)) which will be compulted by [modp_ninv31()](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L648-L662) .
 
 Now, `0x7FFFFFFF` is the 31 bit sequence of **1** (**1111....**).
 
-So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Since $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means getting the remainings divided by $2^{31}$.
+So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Because of $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means to get the remainings divided by $2^{31}$.
 
 Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
 
