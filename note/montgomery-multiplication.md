@@ -26,8 +26,6 @@ $$
 \end{aligned}
 $$
 
-- $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
-
 # The main part of this note.
 I was puzzled that if the Montgomery Multiplication was 
 
@@ -163,3 +161,5 @@ $$
   - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
       - If $d$ is negative (i.e., if the subtraction above went below zero), add $p$ to bring $d$ back into the range [0, p-1].
       - This line effectively handles the case where $d$ might be negative by conditionally adding $p$.
+
+Hope this note will help someone in someday sometime...
