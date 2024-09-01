@@ -163,7 +163,7 @@ $$
   - $$\Rightarrow \overline{x} \cdot \overline{y} < 2^{62}$$
   - $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p \text{ is } < 2^{62} \qquad$$ (* since $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$$ )
   - therefore, $$(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$$
-  - $$\Rightarrow ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
+  - $$\text{Left-aligned: } \Rightarrow ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
   - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to **"mod p"** of $$\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p} \text{"}$$.
   - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
       - If $$d$$ is negative (i.e., if the subtraction above went below zero), add $$p$$ to bring $$d$$ back into the range [0, p-1].
