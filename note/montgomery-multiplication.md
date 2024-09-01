@@ -64,8 +64,6 @@ $$
 \end{aligned}
 $$ 
 
-where $r = 2^{31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
-
 Now, for some integer $m$
 
 $$
@@ -98,22 +96,14 @@ $$
 ### We want $m$ such that,
 
 $$
-(\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0
+\begin{aligned}
+(\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0 \\
+\text{so,}\\
+\overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} \\
+\text{that is equivalent}
+\overline{x} \cdot \overline{y} + m \cdot p = k \cdot r \\
+\text{for some integer }k.
 $$
-
-so,
-
-$$
-\overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} 
-$$
-
-that is equivalent
-
-$$
-\overline{x} \cdot \overline{y} + m \cdot p = k \cdot r 
-$$
-
-for some integer $k$.
 
 We can solve for $m$:
 
