@@ -1,4 +1,4 @@
-# reference
+# References
 - [Montgomery Multiplication (Algorithmica / HPC)](https://en.algorithmica.org/hpc/number-theory/montgomery/)
 - [Montgomery Multiplication (cp-algorithms.com)](https://cp-algorithms.com/algebra/montgomery_multiplication.html)
 - [Montgomery Multiplication Explained (Fast Modular Multiplication)](https://codeforces.com/blog/entry/103374)
