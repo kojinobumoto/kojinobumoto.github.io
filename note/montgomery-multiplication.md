@@ -103,6 +103,7 @@ $$
 \text{that is equivalent}
 \overline{x} \cdot \overline{y} + m \cdot p = k \cdot r \\
 \text{for some integer }k.
+\end{aligned}
 $$
 
 We can solve for $m$:
