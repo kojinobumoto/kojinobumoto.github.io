@@ -159,11 +159,9 @@ $$
 
 - The `>> 31` part of `((z + w) >> 31)` is equivalent to $$\text{"}r^{-1}\text{"}$$ of $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$$.
 
-- By definition of $$\text{" }\overline{x} = x \cdot r \mod{p}\text{"}$$ where $$r=2^{31}$$ and $$2^{30} < p < 2^{31}$$, that impiles $$\overline{x} < 2^{31}$$.
-  - $$\Rightarrow \overline{x} \cdot \overline{y} < 2^{62}$$
+- By definition of $$\text{" }\overline{x} = x \cdot r \mod{p}\text{"}$$ where $$r=2^{31}$$ and $$2^{30} < p < 2^{31}$$, that impiles $$\overline{x} < 2^{31}$$ , so that  $$\overline{x} \cdot \overline{y} < 2^{62}$$
   - $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p \text{ is } < 2^{62} \qquad$$ (* since $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$$ )
-  - therefore, $$(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$$
-  - $$\text{Left-aligned: } \Rightarrow ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
+  - therefore, $$(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$$ , so that $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
   - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to **"mod p"** of $$\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p} \text{"}$$.
   - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
       - If $$d$$ is negative (i.e., if the subtraction above went below zero), add $$p$$ to bring $$d$$ back into the range [0, p-1].
