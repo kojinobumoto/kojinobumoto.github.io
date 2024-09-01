@@ -58,7 +58,10 @@ Now I think I understood "why", so, I'll keep my note in this page.
 We want to compute 
 
 $$
-\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}
+\begin{aligned}
+\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \\
+\text{where }r = 2^{31}\text{ and }p\text{ is a prime such that }2^{30} < p < 2^{31}
+\end{aligned}
 $$ 
 
 where $r = 2^{31}$ and $p$ is a prime such that $2^{30} < p < 2^{31}$ .
