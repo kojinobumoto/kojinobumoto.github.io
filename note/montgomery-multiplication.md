@@ -162,4 +162,5 @@ $$
       - If $d$ is negative (i.e., if the subtraction above went below zero), add $p$ to bring $d$ back into the range [0, p-1].
       - This line effectively handles the case where $d$ might be negative by conditionally adding $p$.
 
+
 Hope this note will help someone in someday sometime...
