@@ -6,7 +6,7 @@
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
 
 # Before getting started
-I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\text{``}\cdot\text{``}$ as the "normal" multiplication.
+I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\text{`}\cdot\text{`}$ as the "normal" multiplication.
 
 i.e)
 - The representative of a number $x$ in the Montgomery space is
@@ -146,12 +146,12 @@ $$
 ### Now, let's compare with the actual implementation.
 `z = (uint64_t)a * (uint64_t)b;` is equivalent to $\overline{x} \cdot \overline{y}$.
 
-```(z * p0i)``` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)).
+`(z * p0i)` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)).
 
-Now, ```0x7FFFFFFF``` is the 31 bit sequence of **1** (**1111....**).
+Now, `0x7FFFFFFF` is the 31 bit sequence of **1** (**1111....**).
 
-So, ```& (uint64_t)0x7FFFFFFF``` is equivalent to **"mod r"**. Since $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with ```0x7FFFFFFF``` means getting the remainings divided by $2^{31}$.
+So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Since $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means getting the remainings divided by $2^{31}$.
 
-Therefore, ```(z * p0i) & (uint64_t)0x7FFFFFFF)``` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
+Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
 
-and ```w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;``` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
+and `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
