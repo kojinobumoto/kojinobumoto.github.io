@@ -4,6 +4,7 @@
 - [Montgomery Multiplication Explained (Fast Modular Multiplication)](https://codeforces.com/blog/entry/103374)
 - [Montgomery reduction (DSZQUP XJLJ)](https://cryptography.fandom.com/wiki/Montgomery_reduction)
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
+- And great thanks to ChatGPT!
 
 # Before getting started
 I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\text{"}\cdot\text{"}$ as the "normal" multiplication.
@@ -156,9 +157,12 @@ $$
 
 - The `>> 31` part of `((z + w) >> 31)` is equivalent to $\text{"}r^{-1}\text{"}$ of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$.
 
-- By defninition of $\text{"}\overline{x} = x \cdot r \mod{p}\text{"}$ where $r=2^{31}$ and $2^{30} < p < 2^{31}$, that impiles $\overline{x} < 2^{31}$.
+- By defninition of $\text{" }\overline{x} = x \cdot r \mod{p}\text{"}$ where $r=2^{31}$ and $2^{30} < p < 2^{31}$, that impiles $\overline{x} < 2^{31}$.
   - $\Rightarrow \overline{x} \cdot \overline{y} < 2^{62}$
-  - $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p < 2^{62}$ (* since $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$)
+  - $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p < 2^{62} \qquqd$ (* since $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$)
   - therefore, $(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$
   - $\Rightarrow ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$
   - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to **"mod p"** of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p}$.
+  - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
+      - If $d$ is negative (i.e., if the subtraction above went below zero), add $p$ to bring $d$ back into the range [0, p-1].
+      - This line effectively handles the case where $d$ might be negative by conditionally adding $p$.
