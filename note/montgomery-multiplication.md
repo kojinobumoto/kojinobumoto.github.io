@@ -73,7 +73,7 @@ $$
 ### Let's see why.
 
 $$
-\text{Let} \qquad C = \overline{x} \cdot \overline{y} + m \cdot p
+\text{Let } C = \overline{x} \cdot \overline{y} + m \cdot p
 $$
 
 then,
