@@ -57,7 +57,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 Now I think I understood "why", so, I'll keep my note in this page.
 
 ## The thing I understood.
-We want to compute 
+We want to compute:
 
 $$
 \begin{aligned}
@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$ 
 
-Now, for some integer $m$
+Now, for some integer $m$, we have:
 
 $$
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} \mod{p}
@@ -75,13 +75,12 @@ $$
 ### Let's see why.
 
 $$
-\text{Let } C = \overline{x} \cdot \overline{y} + m \cdot p
-$$
-
-then,
-
-$$
+\begin{aligned}
+\text{Let } C = \overline{x} \cdot \overline{y} + m \cdot p \\
+\\
+\text{then} \\
 C \cdot r^{-1} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} = \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
+\end{aligned}
 $$
 
 $$
