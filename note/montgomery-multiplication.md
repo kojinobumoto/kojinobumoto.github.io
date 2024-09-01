@@ -6,7 +6,7 @@
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
 
 # Before getting started
-I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\text{`} \cdot \text{`}$ as the "normal" multiplication.
+I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $` \cdot `$ as the "normal" multiplication.
 
 i.e)
 - The representative of a number $x$ in the Montgomery space is
