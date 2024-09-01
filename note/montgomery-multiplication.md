@@ -71,10 +71,9 @@ $$
 $$
 
 ### Let's see why.
-Let 
 
 $$
-C = \overline{x} \cdot \overline{y} + m \cdot p
+\text{Let}\qquadC = \overline{x} \cdot \overline{y} + m \cdot p
 $$
 
 then,
