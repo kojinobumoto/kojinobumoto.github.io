@@ -3,7 +3,8 @@ layout: post
 title: About implementation of Montgomery Multiplication
 katex: True
 ---
-# References
+# About implementation of Montgomery Multiplication
+## References
 - [Montgomery Multiplication (Algorithmica / HPC)](https://en.algorithmica.org/hpc/number-theory/montgomery/)
 - [Montgomery Multiplication (cp-algorithms.com)](https://cp-algorithms.com/algebra/montgomery_multiplication.html)
 - [Montgomery Multiplication Explained (Fast Modular Multiplication)](https://codeforces.com/blog/entry/103374)
@@ -11,7 +12,7 @@ katex: True
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
 - And great thanks to ChatGPT!
 
-# Before getting started
+## Before getting started
 I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $$x$$ and multiplication $$*$$ in the Montgomery space, and $$\text{"}\cdot\text{"}$$ as the "normal" multiplication.
 
 i.e)
@@ -32,7 +33,7 @@ $$
 $$
 
 
-# The main part of this note.
+## The main part of this note.
 I was puzzled that if the Montgomery Multiplication was 
 
 $$
