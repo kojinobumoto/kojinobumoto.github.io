@@ -24,7 +24,7 @@ $$
 - $n$ and $r$ are integers such that $r > n$ and $r$ is coprime to $n$.
 
 # The main part of this note.
-I was curious about if the Montgomery Multiplication was 
+I was puzzled that if the Montgomery Multiplication was 
 
 $$
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}
@@ -32,7 +32,7 @@ $$
 
 then, 
 
-how the actual implementation becomes as follows (for example, *modp_montymul()* in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) ).
+how on the earth the actual implementation becomes as follows (for example, *modp_montymul()* in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) ).
 ```
 /*
  * Montgomery multiplication modulo p. The 'p0i' value is -1/p mod 2^31.
@@ -53,7 +53,7 @@ modp_montymul(uint32_t a, uint32_t b, uint32_t p, uint32_t p0i) {
 
 Now I think I understood "why", so, I'll keep my note in this page.
 
-## Explanation
+## The thing I understood.
 We want to compute 
 
 $$
@@ -144,14 +144,11 @@ $$
 $$
 
 ### Now, let's compare with the actual implementation.
-`z = (uint64_t)a * (uint64_t)b;` is equivalent to $\overline{x} \cdot \overline{y}$.
+- `z = (uint64_t)a * (uint64_t)b;` is equivalent to $\overline{x} \cdot \overline{y}$.
+- `(z * p0i)` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)) which will be compulted by [modp_ninv31()](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L648-L662) .
 
-`(z * p0i)` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)) which will be compulted by [modp_ninv31()](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L648-L662) .
+- Now, `0x7FFFFFFF` is the 31 bit sequence of **1** (**1111....**).
+  - So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Because of $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means to get the remainings divided by $2^{31}$.
 
-Now, `0x7FFFFFFF` is the 31 bit sequence of **1** (**1111....**).
-
-So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Because of $r=2^{31}$ (pow 2 31), taking the lower 31 bit of $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$ with `0x7FFFFFFF` means to get the remainings divided by $2^{31}$.
-
-Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
-
-and `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
+- Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$, 
+  - and `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$.
