@@ -22,7 +22,7 @@ $$
 \begin{aligned}
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n} \\
 \\
-\text{where } n \test{ and } r \text{ are integers such that } r > n \text{ and } r \text{ is coprime to } n.
+\text{where } n \texst{ and } r \text{ are integers such that } r > n \text{ and } r \text{ is coprime to } n.
 \end{aligned}
 $$
 
