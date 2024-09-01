@@ -156,4 +156,4 @@ $$
 
 - The `>> 31` part of `((z + w) >> 31)` is equivalent to $\text{"}r^{-1}\text{"}$ of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$.
 
-- Here, $\overline{x} = x \cdot r \mod{p}$ where $r=2^{31}$ and $2^{30} < p < 2^{31}$, which impiles $\overline{x} < 2^{30}$.
+- Here, $\overline{x} = x \cdot r \mod{p}$ where $r=2^{31}$ and $2^{30} < p < 2^{31}$, which impiles $\overline{x} < 2^{31}$.
