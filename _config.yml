@@ -1,1 +1,2 @@
-
+kramdown:
+  math_engine: katex
