@@ -24,12 +24,13 @@ $$
 - The Montgomery Multiplication is
 
 $$
-\begin{align*}
+\begin{aligned}
 \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n} \\
 \\
 \text{where } n \text{ and } r \text{ are integers such that } r > n \text{ and } r \text{ is coprime to } n.
-\end{align*}
+\end{aligned}
 $$
+
 
 # The main part of this note.
 I was puzzled that if the Montgomery Multiplication was 
