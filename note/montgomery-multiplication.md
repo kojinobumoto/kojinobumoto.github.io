@@ -60,7 +60,7 @@ We want to compute
 $$
 \begin{aligned}
 \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \\
-\text{where }r = 2^{31}\text{ and }p\text{ is a prime such that }2^{30} < p < 2^{31}
+\text{where }r = 2^{31}\text{ and }p\text{ is an odd integer such that }2^{30} < p < 2^{31}
 \end{aligned}
 $$ 
 
