@@ -102,7 +102,8 @@ $$
 \overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} \\
 \\
 \text{that is equivalent} \\
-\overline{x} \cdot \overline{y} + m \cdot p = k \cdot r \qquad\text{for some integer }k.
+\overline{x} \cdot \overline{y} + m \cdot p = k \cdot r \\
+\text{for some integer }k.
 \end{aligned}
 $$
 
