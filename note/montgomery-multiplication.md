@@ -6,7 +6,7 @@
 - [Open Quantum Safe (github)](https://github.com/open-quantum-safe)
 
 # Before getting started
-I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $`\cdot`$ as the "normal" multiplication.
+I'll use the same notation in [this page](https://en.algorithmica.org/hpc/number-theory/montgomery/) to represent the number $x$ and multiplication $*$ in the Montgomery space, and $\text{``}\cdot\text{``}$ as the "normal" multiplication.
 
 i.e)
 - The representative of a number $x$ in the Montgomery space is
@@ -144,7 +144,7 @@ $$
 $$
 
 ### Now, let's compare with the actual implementation.
-```z = (uint64_t)a * (uint64_t)b;``` is equivalent to $\overline{x} \cdot \overline{y}$.
+`z = (uint64_t)a * (uint64_t)b;` is equivalent to $\overline{x} \cdot \overline{y}$.
 
 ```(z * p0i)``` is equivalent to $(-\overline{x} \cdot \overline{y} \cdot p^{-1})$, because the 'p0i' value is $-1/p \mod{r}$ (modular inverse of $p$ (i.e. $p^{-1}$)).
 
