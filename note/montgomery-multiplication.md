@@ -161,4 +161,4 @@ $$
   - $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p < 2^{62}$ (* since $((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$)
   - therefore, $(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$
   - $\Rightarrow ( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$
-  - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to $\text{"}\mod{p}\text{"}$ of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p}$
+  - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to **mod p** of $( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p}$
