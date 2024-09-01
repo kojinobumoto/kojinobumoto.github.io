@@ -25,10 +25,8 @@ $$
 - The Montgomery Multiplication is
 
 $$ \overline{x} * \overline{y} = \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{n} $$
-<p align="center">
-where $$n$$  and $$r$$ are integers such that $$r > n$$ and $$r$$ is coprime to $$n$$.
-</p>
 
+where $$n$$  and $$r$$ are integers such that $$r > n$$ and $$r$$ is coprime to $$n$$.
 
 ## The main part of this note.
 I was puzzled that if the Montgomery Multiplication was 
