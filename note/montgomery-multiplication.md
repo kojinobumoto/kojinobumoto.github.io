@@ -80,11 +80,8 @@ $$
 \\
 \text{then} \\
 C \cdot r^{-1} = (\overline{x} \cdot \overline{y} + m \cdot p) \cdot r^{-1} = \overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
+\\
+\\
 C \cdot r^{-1} \mod{p} \\
 \qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
 \qquad &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
@@ -98,6 +95,7 @@ $$
 $$
 \begin{aligned}
 (\overline{x} \cdot \overline{y} + m \cdot p) \mod{r} = 0 \\
+\\
 \text{so,}\\
 \overline{x} \cdot \overline{y} + m \cdot p \equiv 0 \mod{r} \\
 \\
@@ -120,13 +118,11 @@ Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime), by mu
 
 $$
 m \equiv -\overline{x} \cdot \overline{y} \cdot p^{-1} \mod{r}
-$$
-
-therefore,
-
-$$
+\\
+\text{therefore,}\\
 m = (-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}
 $$
+
 
 ### As a result of above discussion, we get,
 
