@@ -93,10 +93,20 @@ $$
 $$
 \begin{aligned}
 C \cdot r^{-1} \mod{p} \\
-\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
-\qquad &= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
-\qquad &= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p}   \qquad (\text{ * since}  \quad m \cdot p \cdot r^{-1} \text{ is divisible by } p \text{,} \quad m \cdot p \cdot r^{-1} \mod{p} = 0) \\
-\qquad &= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}  \qquad  (\text{ * since} \quad (a \mod{b}) \mod{b} = a \mod{b})
+&= (\overline{x} \cdot \overline{y} \cdot r^{-1} + m \cdot p \cdot r^{-1}) \mod{p} \\
+&= ( (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p}) + (m \cdot p \cdot r^{-1} \mod{p}) ) \mod{p} \\
+&= (\overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p})  \mod{p} \quad \text{ (*1) }\\
+\\
+&= \overline{x} \cdot \overline{y} \cdot r^{-1} \mod{p} \qquad \text{ (*2) } \\
+\\
+\text{ (*1)  } \\
+m \cdot p \cdot r^{-1} \mod{p}\\
+\rightarrow ((m \cdot p \mod{p}) \cdot (r^{-1} \mod{p})) \mod{p}\\
+\rightarrow (0 \cdot (r^{-1} \mod{p})) \mod{p}\\
+\rightarrow  0 \\
+\\
+\text{ (*2)  } \\
+(a \mod{b}) \mod{b} = a \mod{b}
 \end{aligned}
 $$
 
