@@ -108,11 +108,11 @@ $$
 We can solve for $m$:
 
 $$
-m \cdot p = k \cdot r  - \overline{x} \cdot \overline{y} 
-$$
-
-$$
-m \cdot p \equiv -\overline{x} \cdot \overline{y} \mod{r} 
+\begin{aligned}
+m \cdot p = k \cdot r  - \overline{x} \cdot \overline{y} \\
+\\
+m \cdot p \equiv -\overline{x} \cdot \overline{y} \mod{r}
+\end{aligned}
 $$
 
 Now, since $p \cdot p^{-1} \equiv 1 \mod{r}$  (* $p$ and $r$ are coprime), by multiplying both sides of above equation by $p^{-1}$, we get
