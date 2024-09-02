@@ -170,7 +170,7 @@ $$
 - The `>> 31` part of `((z + w) >> 31)` is corresponds to $$\text{"}r^{-1}\text{"}$$ of $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$$. (* since $$r=2^{31}$$)
 
 - By definition of $$\quad \text{" }\overline{x} = x \cdot r \mod{p}\text{"} \quad$$ where $$r=2^{31}$$ and $$2^{30} < p < 2^{31}$$, that impiles $$\overline{x} < 2^{31}$$ , so that  $$\overline{x} \cdot \overline{y} < 2^{62}$$
-  - $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p \text{ is } < 2^{62} \qquad$$ (* since $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$$ )
+  - then, $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p \text{ is } < 2^{62} \qquad$$ (* since $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$$ )
   - therefore, $$(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$$ , so that $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
   - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is corresponds to **"mod p"** of $$\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p} \text{"}$$.
   - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
