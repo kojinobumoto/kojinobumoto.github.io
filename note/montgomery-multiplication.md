@@ -157,22 +157,22 @@ $$
 $$
 
 ### Now, let's compare with the actual implementation.
-- `z = (uint64_t)a * (uint64_t)b;` is equivalent to $$\overline{x} \cdot \overline{y}$$.
+- `z = (uint64_t)a * (uint64_t)b;` is corresponds to $$\overline{x} \cdot \overline{y}$$.
 
-- `(z * p0i)` is equivalent to $$(-\overline{x} \cdot \overline{y} \cdot p^{-1})$$, because the 'p0i' value is $$-1/p \mod{r}$$ (modular inverse of $$p$$ (i.e. $$p^{-1}$$)) which will be compulted by [modp_ninv31()](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L648-L662) .
+- `(z * p0i)` is corresponds to $$(-\overline{x} \cdot \overline{y} \cdot p^{-1})$$, because the 'p0i' value is $$-1/p \mod{r}$$ (modular inverse of $$p$$ (i.e. $$p^{-1}$$)) which will be compulted by [modp_ninv31()](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L648-L662) .
 
 - Now, `0x7FFFFFFF` is the 31 bit sequence of **1** (**1111....**).
-  - So, `& (uint64_t)0x7FFFFFFF` is equivalent to **"mod r"**. Because of $$r=2^{31}$$ (pow 2 31), taking the lower 31 bit of $$(-\overline{x} \cdot \overline{y} \cdot p^{-1})$$ with `0x7FFFFFFF` means to get the remainings divided by $$2^{31}$$.
+  - So, `& (uint64_t)0x7FFFFFFF` is corresponds to **"mod r"**. Because of $$r=2^{31}$$ (pow 2 31), taking the lower 31 bit of $$(-\overline{x} \cdot \overline{y} \cdot p^{-1})$$ with `0x7FFFFFFF` means to get the remainings divided by $$2^{31}$$.
 
-- Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is equivalent to $$((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$$, 
-  - so that `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is equivalent to $$((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$$.
+- Therefore, `(z * p0i) & (uint64_t)0x7FFFFFFF)` is corresponds to $$((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r})$$, 
+  - so that `w = ((z * p0i) & (uint64_t)0x7FFFFFFF) * p;` is corresponds to $$((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p)$$.
 
-- The `>> 31` part of `((z + w) >> 31)` is equivalent to $$\text{"}r^{-1}\text{"}$$ of $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$$. (* since $$r=2^{31}$$)
+- The `>> 31` part of `((z + w) >> 31)` is corresponds to $$\text{"}r^{-1}\text{"}$$ of $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} )$$. (* since $$r=2^{31}$$)
 
 - By definition of $$\quad \text{" }\overline{x} = x \cdot r \mod{p}\text{"} \quad$$ where $$r=2^{31}$$ and $$2^{30} < p < 2^{31}$$, that impiles $$\overline{x} < 2^{31}$$ , so that  $$\overline{x} \cdot \overline{y} < 2^{62}$$
   - $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p \text{ is } < 2^{62} \qquad$$ (* since $$((\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) < 2^{31}$$ )
   - therefore, $$(\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) < 2^{62}$$ , so that $$( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) < 2^{31}$$
-  - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is equivalent to **"mod p"** of $$\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p} \text{"}$$.
+  - so, `- p` of `d = (uint32_t)((z + w) >> 31) - p;` is corresponds to **"mod p"** of $$\text{"}( (\overline{x} \cdot \overline{y} + ((-\overline{x} \cdot \overline{y} \cdot p^{-1}) \mod{r}) \cdot p) \cdot r^{-1} ) \mod{p} \text{"}$$.
   - The final part `d += p & -(d >> 31);` is making sure the result to be positive value.
       - If $$d$$ is negative (i.e., if the subtraction above went below zero), add $$p$$ to bring $$d$$ back into the range [0, p-1].
       - This line effectively handles the case where $$d$$ might be negative by conditionally adding $$p$$.
