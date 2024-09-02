@@ -41,7 +41,7 @@ $$
 
 then, 
 
-how on the earth the actual implementation becomes as follows (for example, *modp_montymul()* in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) ).
+how on the earth the actual implementation becomes as follows in [open-quantum-safe](https://github.com/open-quantum-safe) (for example, *modp_montymul()* in [sig/falcon/pqclean_falcon-1024_aarch64/keygen.c](https://github.com/open-quantum-safe/liboqs/blob/main/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c#L716-L726) )?
 ```
 /*
  * Montgomery multiplication modulo p. The 'p0i' value is -1/p mod 2^31.
