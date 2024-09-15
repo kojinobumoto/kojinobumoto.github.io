@@ -1,1 +1,2 @@
 - [About implementation of Montgomery multiplication](note/montgomery-multiplication.md)
+- [intuition of modp_R2](note/intuition-of-modp_R2.md)
