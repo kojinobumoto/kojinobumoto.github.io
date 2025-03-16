@@ -1,3 +1,4 @@
 - [About implementation of Montgomery multiplication](note/01.montgomery-multiplication.md)
 - [intuition of modp_R2](note/02.intuition-of-modp_R2.md)
 - [calculation of modp_Rx](note/03.calculation-of-modp_Rx.md)
+- [04.intution-of-mq_conv_small](note/04.intution-of-mq_conv_small.md)
