@@ -2,4 +2,4 @@
 - [02.intuition of modp_R2](note/02.intuition-of-modp_R2.md)
 - [03.calculation of modp_Rx](note/03.calculation-of-modp_Rx.md)
 - [04.intution of mq_conv_small](note/04.intution-of-mq_conv_small.md)
-- [05.Garner's algorithm](note/05.Garners-algorithm.md)
+- [05.Garner's algorithm and zint_rebuild_CRT()](note/05.Garners-algorithm-and-zint_rebuild_CRT.md)
