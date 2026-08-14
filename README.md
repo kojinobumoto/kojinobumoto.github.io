@@ -3,3 +3,4 @@
 - [03.calculation of modp_Rx](note/03.calculation-of-modp_Rx.md)
 - [04.intution of mq_conv_small](note/04.intution-of-mq_conv_small.md)
 - [05.Garner's algorithm and zint_rebuild_CRT()](note/05.Garners-algorithm-and-zint_rebuild_CRT.md)
+- [06.Git's base-128-style encoding for OFS_DELTA](note/06.Gits_base-128-style_encoding_for_OFS_DELTA.md)
